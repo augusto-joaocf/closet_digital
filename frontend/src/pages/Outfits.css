@@ -1,0 +1,16 @@
+.album-actions, .outfit-list { margin-top: 60px; display: grid; gap: 30px; }
+.outfit-list-add { margin-top: 30px; }
+.outfit-card { position: relative; }
+.outfit-unavailable { display: block; font-size: 10px; color: var(--brown); margin-top: 3px; text-align: right; }
+.availability-note { margin: 10px 18px 0; font-size: 11px; line-height: 1.9; color: var(--brown); text-align: center; }
+.outfit-detail-grid { margin-top: 60px; }
+.availability-note + .outfit-detail-grid { margin-top: 24px; }
+.outfit-edit-button { margin-top: 60px; }
+.outfit-name { margin-top: 60px; }
+.outfit-selected-grid { margin-top: 30px; }
+.outfit-form-actions { margin-top: 60px; }
+.outfit-save { margin-top: 60px; }
+.outfit-delete { margin-top: 30px; }
+.selector-modal { width: min(393px, 100%); max-width: 100%; max-height: calc(100dvh - 98px - env(safe-area-inset-bottom, 0px)); padding: 0 3px 16px; border: 3px solid var(--border); margin: 0 auto auto; background: var(--background); }
+.selector-modal .modal-close { left: auto; right: 6px; top: 0; height: 28px; }
+.selector-confirm { margin-top: 20px; }

@@ -1,0 +1,30 @@
+.button { display: flex; align-items: center; justify-content: center; min-height: 50px; width: 100%; padding: 8px 12px; border: 3px solid var(--border); border-radius: 9px; background: var(--surface); color: var(--ink); text-align: center; text-decoration: none; font: inherit; font-size: 14px; line-height: 1.7; cursor: pointer; }
+.button--filled { background: var(--border); }
+.button:disabled { opacity: .65; cursor: wait; }
+.button:hover { border-color: var(--brown); }
+.button-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.text-link { color: var(--brown); font-size: 12px; line-height: 2; text-decoration: none; background: none; border: 0; padding: 0; cursor: pointer; }
+.text-link:hover { text-decoration: underline; }
+.floating-field { position: relative; min-width: 0; }
+.floating-field input { width: 100%; height: 50px; border: 3px solid var(--border); border-radius: 9px; padding: 10px 8px 5px; background: var(--input); color: var(--ink); font: inherit; font-size: 14px; line-height: 1.5; }
+.floating-field label { position: absolute; left: 8px; top: 0; max-width: calc(100% - 16px); padding: 0 2px; line-height: 26px; font-size: 14px; background: var(--field-background, var(--background)); transform: translateY(-28px); transition: transform 200ms ease, color 200ms ease; pointer-events: none; white-space: nowrap; }
+.floating-field:focus-within label, .floating-field.has-value label { transform: translateY(-14px); }
+.floating-field:focus-within input { border-color: var(--rose); }
+.floating-field:focus-within label { color: var(--brown); }
+.select-field { position: relative; min-width: 0; }
+.select-field::after { content: '∨'; position: absolute; right: 10px; top: 11px; line-height: 26px; font-size: 18px; pointer-events: none; }
+.select-field select { appearance: none; width: 100%; height: 50px; padding: 7px 25px 7px 7px; border: 3px solid var(--border); border-radius: 9px; font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); text-overflow: ellipsis; cursor: pointer; }
+.select-field option { font-family: inherit; color: var(--ink); }
+.field-error { display: block; color: var(--error); font-size: 11px; line-height: 1.8; margin-top: 4px; }
+.has-error input, .has-error select { border-color: var(--error); }
+.form-error { color: var(--error); font-size: 12px; line-height: 1.8; text-align: center; margin: 12px 0; }
+.empty-state { text-align: center; padding: 0 8px; margin: auto 0; }
+.empty-state h2 { font-size: 24px; line-height: 1.8; font-weight: 400; margin: 0; }
+.empty-state p { font-size: 13px; margin: 3px 0 28px; line-height: 1.9; }
+.empty-state .button { max-width: 300px; margin: 28px auto 0; }
+.icon { display: block; width: 40px; height: 40px; object-fit: contain; }
+.image-upload { position: relative; }
+.image-upload-label { display: block; cursor: pointer; }
+.file-input { position: absolute; opacity: 0; width: 1px; height: 1px; overflow: hidden; }
+.image-upload:focus-within .image-upload-label { outline: 2px solid var(--brown); outline-offset: 5px; border-radius: 8px; }
+@media (prefers-reduced-motion: reduce) { .floating-field label { transition: none; } }

@@ -1,0 +1,2 @@
+.feedback { position: fixed; z-index: 20; left: 50%; bottom: calc(94px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); width: min(345px, calc(100% - 32px)); pointer-events: none; }
+.feedback span { display: block; background: var(--surface); border: 2px solid var(--rose); border-radius: 8px; padding: 12px 15px; text-align: center; font-size: 12px; line-height: 1.9; }

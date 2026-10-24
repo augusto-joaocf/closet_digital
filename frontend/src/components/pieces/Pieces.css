@@ -1,0 +1,34 @@
+.piece-image { display: grid; place-items: center; width: 120px; height: 120px; border-radius: 9px; overflow: hidden; background: var(--background); }
+.piece-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.piece-image--fallback { background: var(--surface); }
+.piece-image--fallback img { width: 64%; height: 64%; object-fit: contain; opacity: .65; }
+.piece-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
+.piece-card { position: relative; border: 3px solid var(--border); border-radius: 9px; background: var(--surface); min-width: 0; }
+.piece-card-main { border: 0; background: transparent; color: inherit; font: inherit; display: flex; flex-direction: column; align-items: center; gap: 22px; width: 100%; min-height: 194px; padding: 15px 3px 9px; cursor: pointer; }
+.piece-card-main > span:not(.selection-dot) { display: block; width: 100%; font-size: 13px; line-height: 1.8; text-align: center; overflow-wrap: anywhere; }
+.piece-card.is-selected { border-color: var(--rose); }
+.selection-dot { position: absolute; right: 6px; top: 6px; width: 15px; height: 15px; border: 2px solid var(--rose); border-radius: 50%; color: var(--ink); font-size: 10px; background: var(--surface); line-height: 12px; }
+.is-selected .selection-dot { background: var(--rose); }
+.remove-piece { position: absolute; top: 1px; right: 1px; width: 32px; height: 32px; font-size: 22px; border: 0; border-radius: 50%; background: var(--surface); color: var(--brown); cursor: pointer; }
+.piece-search { display: flex; align-items: center; gap: 8px; margin: 30px 14px 42px; }
+.search-field { min-width: 0; position: relative; flex: 1; }
+.search-field input { width: 100%; height: 50px; background: var(--background); border: 3px solid var(--border); border-radius: 9px; padding: 8px 48px 8px 12px; font: inherit; font-size: 14px; color: var(--ink); }
+.search-field > .icon { position: absolute; width: 44px; height: 44px; right: 7px; top: 3px; pointer-events: none; }
+.search-field input::-webkit-search-cancel-button { appearance: none; }
+.filter-toggle { width: 48px; height: 48px; padding: 4px; background: transparent; border: 0; border-radius: 8px; cursor: pointer; }
+.filter-toggle .icon { width: 40px; height: 40px; }
+.filter-toggle.has-filters { background: var(--border); }
+.listing-add { margin-top: 20px; }
+.piece-filters { padding: 18px 39px 17px; border: 3px solid var(--border); border-radius: 9px; background: var(--surface); display: flex; flex-direction: column; gap: 30px; margin-top: -12px; }
+.filter-actions { display: grid; gap: 10px; }
+.piece-form { padding-bottom: 5px; }
+.piece-upload-wrap { position: relative; width: 120px; margin: 60px auto 60px; }
+.piece-upload-wrap .piece-image { border: 3px solid var(--border); }
+.piece-upload-wrap .piece-image:not(.piece-image--fallback) { border: 0; }
+.upload-plus { position: absolute; bottom: 0; right: 2px; font-size: 23px; line-height: 30px; padding: 0 3px; background: var(--surface); border-radius: 5px; }
+.remove-image { position: absolute; white-space: nowrap; top: 123px; left: 50%; transform: translateX(-50%); }
+.select-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px 20px; margin-top: 15px; }
+.piece-form-actions { display: grid; gap: 15px; margin-top: 60px; }
+.favorites-grid { margin-top: 32px; }
+.result-empty { padding: 50px 12px; text-align: center; font-size: 14px; line-height: 2; }
+@media (max-width: 370px) { .piece-card-main { gap: 18px; } .piece-card-main > span:not(.selection-dot) { font-size: 12px; } .piece-filters { padding-left: 28px; padding-right: 28px; } }
